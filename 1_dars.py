@@ -3,6 +3,7 @@
 # Muallif: Muhammadsodiq
 
 import numpy
+import matplotlib.pyplot
 
 a = numpy.zeros([3,2])
 a[0,0] = 1
