@@ -11,5 +11,5 @@ print(array[0,0,0])
 print(array[0,0,1])
 print(array[0,1,0])
 
-word = array[0,0,0] + array[2,0,0] + array[2,0,0]
+word = array[2,0,0] + array[2,0,2] + array[0,0,2] + array[1,0,1]
 print(word)
