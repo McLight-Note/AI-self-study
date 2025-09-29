@@ -20,3 +20,6 @@ ff_pokemon = df[(df['Type 1'] == "Fire") &
 print(ff_pokemon)
 
 # Homework
+
+nan_new = df.isna().sum()
+print(nan_new)
