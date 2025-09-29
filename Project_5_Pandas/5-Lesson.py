@@ -19,7 +19,11 @@ ff_pokemon = df[(df['Type 1'] == "Fire") &
                 (df['Type 2'] == "Flying")]
 print(ff_pokemon)
 
-# Homework
-
 nan_new = df.isna().sum()
 print(nan_new)
+
+# Homework
+
+different_type = df[(df['Type 1'] == "Rock") &
+                    (df['Type 2'] == "Poison")]
+print(different_type)
