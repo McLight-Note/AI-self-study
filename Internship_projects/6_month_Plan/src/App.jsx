@@ -13,9 +13,9 @@ export default function GoalTracker() {
 
   const loadProgress = async () => {
     try {
-      const result = await window.storage.get('goal-progress', false);
-      if (result && result.value) {
-        setCompletedTasks(JSON.parse(result.value));
+      const saved = localStorage.getItem('goal-progress');
+      if (saved) {
+        setCompletedTasks(JSON.parse(saved));
       }
     } catch (error) {
       console.log('No saved progress found, starting fresh');
@@ -26,7 +26,7 @@ export default function GoalTracker() {
 
   const saveProgress = async (newCompleted) => {
     try {
-      await window.storage.set('goal-progress', JSON.stringify(newCompleted), false);
+      localStorage.setItem('goal-progress', JSON.stringify(newCompleted));
     } catch (error) {
       console.error('Failed to save progress:', error);
     }
