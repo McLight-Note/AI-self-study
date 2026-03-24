@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle2, Circle, ChevronDown, ChevronRight, Target, Brain, DollarSign, Dumbbell, Briefcase, Rocket, Star, BookOpen, Calendar, Code2 } from 'lucide-react';
+import { CheckCircle2, Circle, ChevronDown, ChevronRight, Target, Brain, DollarSign, Dumbbell, Briefcase, Rocket, Star, BookOpen, Calendar } from 'lucide-react';
 
 export default function GoalTracker() {
   const [expandedMonths, setExpandedMonths] = useState({ 0: true });
@@ -34,10 +34,9 @@ export default function GoalTracker() {
       "20 min Korean — new vocab (Anki) + grammar point from current chapter",
       "University coursework first if exams are close",
     ]},
-    { day: "월 / 금요일", label: "LeetCode + Power day", color: "bg-green-50 border-green-200", items: [
-      "Mon: 2hr LeetCode — 1–2 problems, focus on understanding the pattern",
-      "Fri: 3–4hr AI project deep work (your main session)",
-      "Fri: 1 full Korean chapter — read, vocab list, exercises",
+    { day: "금요일", label: "Power day", color: "bg-green-50 border-green-200", items: [
+      "3–4hr AI project deep work (this is your main session)",
+      "1 full Korean chapter — read, vocab list, exercises",
       "Weekly review: what did you actually ship this week?",
     ]},
     { day: "토 / 일 / 월", label: "12hr work shifts", color: "bg-orange-50 border-orange-200", items: [
@@ -110,23 +109,6 @@ export default function GoalTracker() {
           ]
         },
         {
-          icon: Code2, name: "LeetCode — Arrays & Hashing + Two Pointers (Weeks 1–4)", color: "text-orange-600", tasks: [
-            { id: "m1-lc-1", text: "Two Sum", resource: "Easy - hashmap O(n)" },
-            { id: "m1-lc-2", text: "Contains Duplicate", resource: "Easy - set" },
-            { id: "m1-lc-3", text: "Valid Anagram", resource: "Easy - char count" },
-            { id: "m1-lc-4", text: "Group Anagrams", resource: "Medium - sorted key hashmap" },
-            { id: "m1-lc-5", text: "Top K Frequent Elements", resource: "Medium - bucket sort" },
-            { id: "m1-lc-6", text: "Product of Array Except Self", resource: "Medium - prefix/suffix arrays" },
-            { id: "m1-lc-7", text: "Encode and Decode Strings", resource: "Medium - length prefix encoding" },
-            { id: "m1-lc-8", text: "Longest Consecutive Sequence", resource: "Medium - set O(n)" },
-            { id: "m1-lc-9", text: "Two Sum II", resource: "Medium - two pointers on sorted array" },
-            { id: "m1-lc-10", text: "3Sum", resource: "Medium - sort + two pointers" },
-            { id: "m1-lc-11", text: "Valid Palindrome", resource: "Easy - two pointers" },
-            { id: "m1-lc-12", text: "Container With Most Water", resource: "Medium - shrink from both ends" },
-            { id: "m1-lc-13", text: "Trapping Rain Water", resource: "Hard - prefix max arrays" },
-          ]
-        },
-        {
           icon: DollarSign, name: "Financial", color: "text-green-600", tasks: [
             { id: "m1-fin-1", text: "Track expenses, set savings target: $500-750/month", resource: "Automate transfers" },
             { id: "m1-fin-2", text: "Save first installment toward $3,000-4,000 emergency fund", resource: "High-yield savings" },
@@ -176,28 +158,6 @@ export default function GoalTracker() {
           ]
         },
         {
-          icon: Code2, name: "LeetCode — Sliding Window + Stack + Binary Search (Weeks 1–4)", color: "text-orange-600", tasks: [
-            { id: "m2-lc-1", text: "Best Time to Buy and Sell Stock", resource: "Easy - sliding min" },
-            { id: "m2-lc-2", text: "Longest Substring Without Repeating Characters", resource: "Medium - sliding window + set" },
-            { id: "m2-lc-3", text: "Longest Repeating Character Replacement", resource: "Medium - window + max freq" },
-            { id: "m2-lc-4", text: "Permutation in String", resource: "Medium - fixed window char count" },
-            { id: "m2-lc-5", text: "Minimum Window Substring", resource: "Hard - shrink window" },
-            { id: "m2-lc-6", text: "Sliding Window Maximum", resource: "Hard - monotonic deque" },
-            { id: "m2-lc-7", text: "Valid Parentheses", resource: "Easy - stack matching" },
-            { id: "m2-lc-8", text: "Min Stack", resource: "Medium - parallel min stack" },
-            { id: "m2-lc-9", text: "Evaluate Reverse Polish Notation", resource: "Medium - stack ops" },
-            { id: "m2-lc-10", text: "Generate Parentheses", resource: "Medium - backtrack open/close counts" },
-            { id: "m2-lc-11", text: "Daily Temperatures", resource: "Medium - monotonic decreasing stack" },
-            { id: "m2-lc-12", text: "Car Fleet", resource: "Medium - stack + sorting" },
-            { id: "m2-lc-13", text: "Largest Rectangle in Histogram", resource: "Hard - monotonic stack" },
-            { id: "m2-lc-14", text: "Binary Search", resource: "Easy - classic template" },
-            { id: "m2-lc-15", text: "Search in Rotated Sorted Array", resource: "Medium - determine sorted half" },
-            { id: "m2-lc-16", text: "Find Minimum in Rotated Sorted Array", resource: "Medium - binary search boundary" },
-            { id: "m2-lc-17", text: "Search a 2D Matrix", resource: "Medium - treat as 1D array" },
-            { id: "m2-lc-18", text: "Koko Eating Bananas", resource: "Medium - binary search on answer" },
-          ]
-        },
-        {
           icon: DollarSign, name: "Financial", color: "text-green-600", tasks: [
             { id: "m2-fin-1", text: "Save second installment (total: $1,000-1,500)", resource: "Stay consistent" },
           ]
@@ -242,28 +202,6 @@ export default function GoalTracker() {
             { id: "m3-kr-8", text: "New words 3B 4과 — Anki daily review streak", resource: "Don't miss a single day" },
             { id: "m3-kr-9", text: "3B 5과 — study grammar point, add new vocab to Anki", resource: "Halfway through 3B 🎉" },
             { id: "m3-kr-10", text: "New words 3B 5과 + review all 3B grammar so far (1–5과)", resource: "Self-test: one sentence each without notes" },
-          ]
-        },
-        {
-          icon: Code2, name: "LeetCode — Linked List + Trees (Weeks 1–4)", color: "text-orange-600", tasks: [
-            { id: "m3-lc-1", text: "Reverse Linked List", resource: "Easy - iterative prev/curr" },
-            { id: "m3-lc-2", text: "Merge Two Sorted Lists", resource: "Easy - pointer merge" },
-            { id: "m3-lc-3", text: "Linked List Cycle", resource: "Easy - fast/slow pointers" },
-            { id: "m3-lc-4", text: "Reorder List", resource: "Medium - find mid + reverse + merge" },
-            { id: "m3-lc-5", text: "Remove Nth Node From End", resource: "Medium - two pointers gap n" },
-            { id: "m3-lc-6", text: "Find the Duplicate Number", resource: "Medium - Floyd's cycle detection" },
-            { id: "m3-lc-7", text: "LRU Cache", resource: "Medium - hashmap + doubly linked list" },
-            { id: "m3-lc-8", text: "Merge K Sorted Lists", resource: "Hard - min-heap" },
-            { id: "m3-lc-9", text: "Reverse Nodes in K-Group", resource: "Hard - recursive group reverse" },
-            { id: "m3-lc-10", text: "Invert Binary Tree", resource: "Easy - recursive swap" },
-            { id: "m3-lc-11", text: "Maximum Depth of Binary Tree", resource: "Easy - DFS" },
-            { id: "m3-lc-12", text: "Diameter of Binary Tree", resource: "Easy - depth + max at each node" },
-            { id: "m3-lc-13", text: "Balanced Binary Tree", resource: "Easy - height check recursive" },
-            { id: "m3-lc-14", text: "Same Tree", resource: "Easy - recursive compare" },
-            { id: "m3-lc-15", text: "Subtree of Another Tree", resource: "Easy - isSameTree helper" },
-            { id: "m3-lc-16", text: "Lowest Common Ancestor of BST", resource: "Medium - compare vals to root" },
-            { id: "m3-lc-17", text: "Binary Tree Level Order Traversal", resource: "Medium - BFS queue" },
-            { id: "m3-lc-18", text: "Binary Tree Right Side View", resource: "Medium - BFS last of each level" },
           ]
         },
         {
@@ -315,29 +253,6 @@ export default function GoalTracker() {
           ]
         },
         {
-          icon: Code2, name: "LeetCode — Trees (cont.) + Tries + Heap + Backtracking (Weeks 1–4)", color: "text-orange-600", tasks: [
-            { id: "m4-lc-1", text: "Count Good Nodes in Binary Tree", resource: "Medium - DFS max so far" },
-            { id: "m4-lc-2", text: "Validate Binary Search Tree", resource: "Medium - DFS with min/max bounds" },
-            { id: "m4-lc-3", text: "Kth Smallest Element in BST", resource: "Medium - inorder traversal" },
-            { id: "m4-lc-4", text: "Construct BST from Preorder Traversal", resource: "Medium - recursion with bounds" },
-            { id: "m4-lc-5", text: "Binary Tree Maximum Path Sum", resource: "Hard - DFS gain at each node" },
-            { id: "m4-lc-6", text: "Serialize and Deserialize Binary Tree", resource: "Hard - BFS or preorder with null markers" },
-            { id: "m4-lc-7", text: "Implement Trie (Prefix Tree)", resource: "Medium - TrieNode children dict" },
-            { id: "m4-lc-8", text: "Add and Search Word", resource: "Medium - DFS with wildcard dot" },
-            { id: "m4-lc-9", text: "Word Search II", resource: "Hard - Trie + DFS backtrack on board" },
-            { id: "m4-lc-10", text: "Kth Largest Element in Array", resource: "Medium - min-heap size k" },
-            { id: "m4-lc-11", text: "K Closest Points to Origin", resource: "Medium - max-heap or quickselect" },
-            { id: "m4-lc-12", text: "Task Scheduler", resource: "Medium - greedy max freq" },
-            { id: "m4-lc-13", text: "Design Twitter", resource: "Medium - heap + user follow map" },
-            { id: "m4-lc-14", text: "Find Median from Data Stream", resource: "Hard - two heaps (max + min)" },
-            { id: "m4-lc-15", text: "Subsets", resource: "Medium - backtrack include/exclude" },
-            { id: "m4-lc-16", text: "Combination Sum", resource: "Medium - backtrack with repeat" },
-            { id: "m4-lc-17", text: "Permutations", resource: "Medium - backtrack swap" },
-            { id: "m4-lc-18", text: "Word Search", resource: "Medium - DFS + visited in-place" },
-            { id: "m4-lc-19", text: "N-Queens", resource: "Hard - backtrack with col/diag sets" },
-          ]
-        },
-        {
           icon: DollarSign, name: "Financial", color: "text-green-600", tasks: [
             { id: "m4-fin-1", text: "Save fourth installment (total: $2,000-3,000)", resource: "Getting close!" },
           ]
@@ -367,6 +282,7 @@ export default function GoalTracker() {
             { id: "m5-ai-5", text: "Write technical blog post: 'How I built a real-time MOT system'", resource: "Medium or Dev.to — shows communication skills" },
             { id: "m5-ai-6", text: "Practice explaining your project in 2 min (record yourself)", resource: "Watch it back — painful but effective" },
             { id: "m5-ai-7", text: "Prep CV interview questions: detection, tracking, Kalman, Hungarian algorithm", resource: "Papers With Code MOT section" },
+            { id: "m5-ai-8", text: "Do 20+ LeetCode mediums (arrays, graphs, DP)", resource: "Focus on patterns not memorization" },
             { id: "m5-ai-9", text: "Apply to 20+ more companies — prioritize startups, they move faster", resource: "YC companies, LinkedIn Easy Apply" },
           ]
         },
@@ -377,30 +293,6 @@ export default function GoalTracker() {
             { id: "m5-kr-3", text: "Write one short Korean paragraph per week (diary style)", resource: "오늘 뭐 했어요? Use grammar from 3A/3B" },
             { id: "m5-kr-4", text: "Listen to Korean podcast or YouTube 20 min on work commute (3x/week)", resource: "TTMIK, 이상한 나라의 며느리, Korean Unnie" },
             { id: "m5-kr-5", text: "Decide: start 4A in Aug OR focus on TOPIK II reading practice", resource: "TOPIK II = more useful for Korean job market" },
-          ]
-        },
-        {
-          icon: Code2, name: "LeetCode — Graphs + Dynamic Programming Part 1 (Weeks 1–4)", color: "text-orange-600", tasks: [
-            { id: "m5-lc-1", text: "Number of Islands", resource: "Medium - DFS/BFS flood fill" },
-            { id: "m5-lc-2", text: "Max Area of Island", resource: "Medium - DFS return area count" },
-            { id: "m5-lc-3", text: "Clone Graph", resource: "Medium - BFS + hashmap visited" },
-            { id: "m5-lc-4", text: "Walls and Gates", resource: "Medium - multi-source BFS" },
-            { id: "m5-lc-5", text: "Rotting Oranges", resource: "Medium - multi-source BFS time" },
-            { id: "m5-lc-6", text: "Pacific Atlantic Water Flow", resource: "Medium - reverse BFS from both coasts" },
-            { id: "m5-lc-7", text: "Surrounded Regions", resource: "Medium - DFS from borders" },
-            { id: "m5-lc-8", text: "Course Schedule", resource: "Medium - cycle detection DFS" },
-            { id: "m5-lc-9", text: "Course Schedule II", resource: "Medium - topological sort" },
-            { id: "m5-lc-10", text: "Number of Connected Components", resource: "Medium - Union-Find or DFS" },
-            { id: "m5-lc-11", text: "Redundant Connection", resource: "Medium - Union-Find detect cycle" },
-            { id: "m5-lc-12", text: "Word Ladder", resource: "Hard - BFS shortest path" },
-            { id: "m5-lc-13", text: "Climbing Stairs", resource: "Easy - DP fib pattern" },
-            { id: "m5-lc-14", text: "Min Cost Climbing Stairs", resource: "Easy - DP bottom-up" },
-            { id: "m5-lc-15", text: "House Robber", resource: "Medium - DP no adjacent" },
-            { id: "m5-lc-16", text: "House Robber II", resource: "Medium - two passes circular" },
-            { id: "m5-lc-17", text: "Longest Palindromic Substring", resource: "Medium - expand around center" },
-            { id: "m5-lc-18", text: "Coin Change", resource: "Medium - DP bottom-up BFS" },
-            { id: "m5-lc-19", text: "Word Break", resource: "Medium - DP + set lookup" },
-            { id: "m5-lc-20", text: "Longest Increasing Subsequence", resource: "Medium - DP O(n2) or patience sort" },
           ]
         },
         {
@@ -443,32 +335,6 @@ export default function GoalTracker() {
             { id: "m6-kr-3", text: "Read 2 Korean articles this month — look up unknown words, add to Anki", resource: "네이버 뉴스 or 한겨레 easy section" },
             { id: "m6-kr-4", text: "Write 4 short Korean diary entries this month (one per week)", resource: "주간 일기 — document your internship hunt in Korean!" },
             { id: "m6-kr-5", text: "Reflect: how much Korean can you actually use now vs March?", resource: "You've covered 18 chapters in 6 months 💪" },
-          ]
-        },
-        {
-          icon: Code2, name: "LeetCode — DP Part 2 + Greedy + Intervals + Bit Manipulation (Weeks 1–4)", color: "text-orange-600", tasks: [
-            { id: "m6-lc-1", text: "Partition Equal Subset Sum", resource: "Medium - 0/1 knapsack DP" },
-            { id: "m6-lc-2", text: "Unique Paths", resource: "Medium - DP grid" },
-            { id: "m6-lc-3", text: "Jump Game", resource: "Medium - greedy max reach" },
-            { id: "m6-lc-4", text: "Jump Game II", resource: "Medium - greedy BFS levels" },
-            { id: "m6-lc-5", text: "Gas Station", resource: "Medium - greedy prefix sum" },
-            { id: "m6-lc-6", text: "Hand of Straights", resource: "Medium - greedy + sorted map" },
-            { id: "m6-lc-7", text: "Edit Distance", resource: "Medium - 2D DP classic" },
-            { id: "m6-lc-8", text: "Burst Balloons", resource: "Hard - interval DP" },
-            { id: "m6-lc-9", text: "Regular Expression Matching", resource: "Hard - 2D DP with dot and star" },
-            { id: "m6-lc-10", text: "Insert Interval", resource: "Medium - linear merge" },
-            { id: "m6-lc-11", text: "Merge Intervals", resource: "Medium - sort + merge" },
-            { id: "m6-lc-12", text: "Non-overlapping Intervals", resource: "Medium - greedy min removals" },
-            { id: "m6-lc-13", text: "Meeting Rooms", resource: "Easy - sort + overlap check" },
-            { id: "m6-lc-14", text: "Meeting Rooms II", resource: "Medium - min-heap end times" },
-            { id: "m6-lc-15", text: "Minimum Interval to Include Each Query", resource: "Hard - sweep + heap" },
-            { id: "m6-lc-16", text: "Single Number", resource: "Easy - XOR all elements" },
-            { id: "m6-lc-17", text: "Number of 1 Bits", resource: "Easy - n and (n-1) trick" },
-            { id: "m6-lc-18", text: "Counting Bits", resource: "Easy - DP i right-shift 1" },
-            { id: "m6-lc-19", text: "Reverse Bits", resource: "Easy - shift and OR" },
-            { id: "m6-lc-20", text: "Missing Number", resource: "Easy - XOR 0 to n" },
-            { id: "m6-lc-21", text: "Sum of Two Integers", resource: "Medium - bit carry simulation" },
-            { id: "m6-lc-22", text: "Reverse Integer", resource: "Medium - pop and push digits" },
           ]
         },
         {
@@ -518,7 +384,7 @@ export default function GoalTracker() {
             <h1 className="text-3xl md:text-4xl font-bold text-slate-900">6-Month Realistic Plan</h1>
           </div>
           <p className="text-slate-500 mb-1 text-sm">March – August 2026 · Student + 36hr work week · 1-2 hrs/day · Autumn AI internship</p>
-          <p className="text-indigo-600 font-medium text-sm mb-4">AI project + 서울대 한국어 3A→3B + LeetCode 150 + job hunt. Each month = one thing to show a recruiter.</p>
+          <p className="text-indigo-600 font-medium text-sm mb-4">AI project + 서울대 한국어 3A→3B + job hunt. Each month = one thing to show a recruiter.</p>
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-sm font-medium text-slate-700">Overall Progress</span>
@@ -637,7 +503,7 @@ export default function GoalTracker() {
         {/* Resources */}
         <div className="bg-white rounded-2xl shadow-lg p-6 mt-6">
           <h3 className="text-xl font-bold text-slate-900 mb-4">🔗 Essential Resources</h3>
-          <div className="grid md:grid-cols-4 gap-4 text-sm">
+          <div className="grid md:grid-cols-3 gap-4 text-sm">
             <div>
               <h4 className="font-semibold text-purple-600 mb-2">Core AI/Tracking</h4>
               <ul className="space-y-1 text-slate-600">
@@ -656,17 +522,6 @@ export default function GoalTracker() {
                 <li>• MLflow experiments</li>
                 <li>• GitHub Actions CI/CD</li>
                 <li>• shields.io for README badges</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-orange-600 mb-2">LeetCode 150</h4>
-              <ul className="space-y-1 text-slate-600">
-                <li>M1: Arrays, Hashing, Two Pointers</li>
-                <li>M2: Sliding Window, Stack, Binary Search</li>
-                <li>M3: Linked List, Trees</li>
-                <li>M4: Tries, Heap, Backtracking</li>
-                <li>M5: Graphs + DP Part 1</li>
-                <li>M6: DP Part 2, Greedy, Intervals, Bits</li>
               </ul>
             </div>
             <div>
